@@ -27,6 +27,7 @@
 | Soneium          | 1868     | -                       | -        |
 | HyveChain        | 7847     | -                       | -        |
 | Unichain         | 130      | -                       | -        |
+| Monad            | 143      | -                       | -        |
 
 ## Overview
 
