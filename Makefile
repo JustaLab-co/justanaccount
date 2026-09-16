@@ -120,6 +120,10 @@ ifeq ($(findstring --network gnosis-mainnet,$(ARGS)),--network gnosis-mainnet)
 	NETWORK_ARGS := --rpc-url $(GNOSIS_MAINNET_RPC_URL) --account $(ACCOUNT) --broadcast --verify --verifier blockscout --verifier-url https://gnosis.blockscout.com/api --chain 100 -vvvv
 endif
 
+ifeq ($(findstring --network arc-mainnet,$(ARGS)),--network arc-mainnet)
+	NETWORK_ARGS := --rpc-url $(ARC_MAINNET_RPC_URL) --account $(ACCOUNT) --broadcast --verify --verifier blockscout --verifier-url https://arcscan.app/api --chain 5042 -vvvv
+endif
+
 ifeq ($(findstring --network arc-testnet,$(ARGS)),--network arc-testnet)
 	NETWORK_ARGS := --rpc-url $(ARC_TESTNET_RPC_URL) --account $(ACCOUNT) --broadcast --verify --verifier blockscout --verifier-url https://testnet.arcscan.app/api --chain 5042002 -vvvv
 endif
@@ -216,6 +220,9 @@ deploy-dos-mainnet:
 	@forge script script/DeployJustanAccount.s.sol:DeployJustanAccount $(NETWORK_ARGS)
 
 deploy-gnosis-mainnet:
+	@forge script script/DeployJustanAccount.s.sol:DeployJustanAccount $(NETWORK_ARGS)
+
+deploy-arc-mainnet:
 	@forge script script/DeployJustanAccount.s.sol:DeployJustanAccount $(NETWORK_ARGS)
 
 deploy-arc-testnet:
