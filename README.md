@@ -21,7 +21,7 @@
 | Ink              | 57073    | Ink Sepolia             | 763373   |
 | DOS Chain        | 7979     | -                       | -        |
 | Gnosis           | 100      | -                       | -        |
-| -                | -        | Arc Testnet             | 5042002  |
+| Arc              | 5042     | Arc Testnet             | 5042002  |
 | Polygon          | 137      | Amoy                    | 80002    |
 | Robinhood Chain  | 4663     | -                       | -        |
 | Soneium          | 1868     | -                       | -        |
